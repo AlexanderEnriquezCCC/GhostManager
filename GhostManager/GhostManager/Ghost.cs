@@ -22,5 +22,21 @@ namespace GhostManager
                 }
             }
         }
+
+        public Ghost()
+        {
+            this.gState = GhostState.Roving;
+        }
+
+        public void Death()
+        {
+            this.gState = GhostState.Dead;
+        }
+
+        public virtual void Log(string s)
+        {
+            //nothing
+            Console.WriteLine(s);
+        }
     }
 }
